@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STM32 Embedded C Project | Joseph Slattery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f3f4f6;
+      color: #333;
+    }
+    header {
+      background: #1e1e2f;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      border-left: 4px solid #2563eb;
+      padding-left: 10px;
+      color: #1e1e2f;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "• ";
+      color: #2563eb;
+    }
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>STM32 Embedded C Systems Project</h1>
+    <p>GPIO • Timers • Interrupts • PWM • Microcontroller Programming</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>📘 Project Overview</h2>
+      <p>This project showcases three embedded systems programs written in C for an STM32 microcontroller. Each module demonstrates control of digital outputs, timers, interrupts, PWM-driven servo control, and embedded state-machine logic. The project highlights practical microcontroller development, hardware interaction, and real-time system behaviour.</p>
+    </section>
+
+    <section>
+      <h2>🧩 Programs Included</h2>
+      <ul>
+        <li><strong>Flashing Lights:</strong> Two LEDs flashing at 3 Hz and 4 Hz using timers and GPIO.</li>
+        <li><strong>Binary Counter:</strong> A 4‑bit binary counter incrementing from 0 to 16 in a loop, with LEDs representing individual bits.</li>
+        <li><strong>Traffic Light & Barrier System:</strong> Three lights, a push‑button input, and a servo‑powered barrier. Standard traffic‑light sequence controls the barrier position, and pressing the button forces a red state.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🛠️ Techniques & Hardware Concepts</h2>
+      <ul>
+        <li>C programming for microcontrollers</li>
+        <li>STM32 development environment</li>
+        <li>Timers for scheduling LED flashing</li>
+        <li>GPIO configuration for digital inputs/outputs</li>
+        <li>Interrupts for button press detection</li>
+        <li>PWM for servo motor control</li>
+        <li>Embedded state‑machine design</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📂 Source Files</h2>
+      <p>Source files included in this project:</p>
+      <ul>
+        <li><a href="https://github.com/joeslattery/university-C-project/blob/main/flashing.c" target="_blank">flashing.c</a></li>
+        <li><a href="https://github.com/joeslattery/university-C-project/blob/main/binary.c" target="_blank">binary.c</a></li>
+        <li><a href="https://github.com/joeslattery/university-C-project/blob/main/lights.c" target="_blank">traffic_light_servo.c</a></li>
+      </ul>
+      <a class="btn" href="https://github.com/joeslattery/university-C-project/blob/main/flashing.c target="_blank">View Flashing Program</a>
+      <a class="btn" href="https://github.com/joeslattery/university-C-project/blob/main/binary.c" target="_blank" style="margin-left:10px;">View Binary Counter</a>
+      <a class="btn" href="https://github.com/joeslattery/university-C-project/blob/main/lights.c" target="_blank" style="margin-left:10px;">View Binary Counter</a>
+    </section>
+
+    <section>
+      <h2>▶️ System Behaviour Summary</h2>
+      <ul>
+        <li>LEDs toggle at stable frequencies driven by timer callbacks.</li>
+        <li>Binary counter updates on a timed cycle and wraps after 16.</li>
+        <li>Traffic light cycles through green → amber → red; red lowers the barrier using PWM‑controlled servo.</li>
+        <li>Button interrupts immediately trigger red‑light safety mode.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🚀 Future Improvements</h2>
+      <ul>
+        <li>Add debouncing logic for the button interrupt.</li>
+        <li>Create a FreeRTOS-based scheduler for cleaner task separation.</li>
+        <li>Implement configurable timing via UART or I2C.</li>
+        <li>Add unit tests using a hardware simulator.</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Joseph Slattery • Embedded Systems Portfolio
+  </footer>
+</body>
+</html>
